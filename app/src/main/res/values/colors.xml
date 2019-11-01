@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#2C0615</color>
+    <color name="colorPrimaryDark">#110208</color>
     <color name="colorAccent">#D81B60</color>
 
     <!-- circle color for rating 10 -->
@@ -33,4 +33,5 @@
 
     <!-- circle color for rating 1 -->
     <color name="rating1">#C03823</color>
+    <color name="white">#FFFFFF</color>
 </resources>

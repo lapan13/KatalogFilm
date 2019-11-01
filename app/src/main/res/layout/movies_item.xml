@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:elevation="@dimen/margin">
+    android:layout_margin="1dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,17 +11,16 @@
 
         <ImageView
             android:id="@+id/img_movie"
-            tools:src="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            tools:src="@color/colorPrimary" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/shape"/>
-
+            android:background="@drawable/shape" />
 
         <TextView
             android:id="@+id/tv_rating"
@@ -41,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/margin"
+            android:layout_margin="@dimen/margin_8"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="@dimen/margin_4"
                 android:text="@string/title"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
@@ -57,32 +56,29 @@
                 android:id="@+id/tv_release_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
-                android:textColor="@android:color/white"
-                android:text="@string/release_date" />
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="@string/release_date"
+                android:textColor="@android:color/white" />
 
             <RatingBar
                 android:id="@+id/rtb_movies"
                 style="?attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginBottom="@dimen/margin_8"
                 android:numStars="5" />
-
 
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
                 android:ellipsize="end"
                 android:maxLines="5"
-                android:text="@string/description"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/synopsis"
                 android:textColor="@android:color/white"
                 android:visibility="gone" />
-
-
         </LinearLayout>
 
         <TextView
@@ -91,10 +87,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/margin"
+            android:layout_margin="@dimen/margin_8"
+            android:background="@drawable/shape"
             android:text="@string/more_info"
             android:textColor="@color/colorAccent"
-            android:background="@drawable/shape"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
