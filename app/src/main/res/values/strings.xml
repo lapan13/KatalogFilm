@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="title">Judul Film</string>
+    <string name="release_date">Tanggal Rilis</string>
+    <string name="description">Deskripsi Film</string>
+    <string name="more_info"><![CDATA[more info >>]]></string>
+    <string name="rating">9.6</string>
+</resources>
