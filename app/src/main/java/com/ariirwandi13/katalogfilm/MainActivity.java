@@ -73,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 "Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy."));
         mMoviesList.add(new MoviesItem(R.drawable.poster_aladdin,"Aladdin", "May 24, 2019", "7.1",
                 "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true."));
-
-
     }
 
     public void buildRecyclerView() {

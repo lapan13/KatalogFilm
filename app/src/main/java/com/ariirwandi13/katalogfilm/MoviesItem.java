@@ -4,7 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class MoviesItem implements Parcelable {
+
     public static final Creator<MoviesItem> CREATOR = new Creator<MoviesItem>() {
+
         @Override
         public MoviesItem createFromParcel(Parcel in) {
             return new MoviesItem(in);
@@ -15,6 +17,7 @@ public class MoviesItem implements Parcelable {
             return new MoviesItem[size];
         }
     };
+
     private int mImageResource;
     private String mTitle;
     private String mDate;

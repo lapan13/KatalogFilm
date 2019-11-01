@@ -23,8 +23,7 @@ public class DetailActivity extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("Detail");
-        collapsingToolbarLayout.setCollapsedTitleTextColor(
-                ContextCompat.getColor(this, R.color.white));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(this, R.color.white));
         collapsingToolbarLayout.setExpandedTitleColor(Color.parseColor("#00FFFFFF"));
 
         Toolbar toolbar = findViewById(R.id.toolbar_detail);
@@ -33,9 +32,7 @@ public class DetailActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-
         }
-
 
         Intent intent = getIntent();
         MoviesItem wisataItem = intent.getParcelableExtra("Example Item");
@@ -67,11 +64,9 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // handle arrow click here
         if (item.getItemId() == android.R.id.home) {
-            finish(); // close this activity and return to preview activity (if there is any)
+            finish();
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
