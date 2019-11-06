@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder> {
@@ -37,7 +35,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     public void onBindViewHolder(MoviesViewHolder holder, int position) {
         MoviesItem currentItem = mMoviesList.get(position);
 
-        Glide.with(holder.itemView)
+        GlideApp.with(holder.itemView)
                 .load(currentItem.getImageResource())
                 .into(holder.mImageMovies);
         holder.mTvTitle.setText(currentItem.getTitle());
@@ -87,3 +85,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         }
     }
 }
+
+
+
