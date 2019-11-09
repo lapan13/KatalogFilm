@@ -16,9 +16,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<MoviesItem> mMoviesList;
-    private RecyclerView mRecyclerView;
-    private MoviesAdapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buildRecyclerView() {
-        mRecyclerView = findViewById(R.id.recyclerView);
+        RecyclerView mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new GridLayoutManager(this, 2);
-        mAdapter = new MoviesAdapter(mMoviesList);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        MoviesAdapter mAdapter = new MoviesAdapter(mMoviesList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

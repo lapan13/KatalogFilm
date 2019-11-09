@@ -44,7 +44,9 @@ public class DetailActivity extends AppCompatActivity {
         String description = wisataItem.getDescription();
 
         ImageView imageMovie = findViewById(R.id.image_detail_movie);
-        imageMovie.setImageResource(imageRes);
+        GlideApp.with(this)
+                .load(imageRes)
+                .into(imageMovie);
 
         TextView tvTitle = findViewById(R.id.tv_detail_title);
         tvTitle.setText(title);
