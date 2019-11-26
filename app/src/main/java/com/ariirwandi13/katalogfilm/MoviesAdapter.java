@@ -14,12 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder> {
-    ArrayList<MoviesItem> moviesList;
-    Context moviesContext;
+    private ArrayList<MoviesItem> moviesList;
 
-    public MoviesAdapter(ArrayList<MoviesItem> moviesList, Context moviesContext) {
+    MoviesAdapter(ArrayList<MoviesItem> moviesList, Context context) {
         this.moviesList = moviesList;
-        this.moviesContext = moviesContext;
     }
 
     @NonNull
@@ -33,7 +31,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     public void onBindViewHolder(@NonNull MoviesViewHolder holder, int position) {
         MoviesItem moviesItem = moviesList.get(position);
 
-        holder.mImageMovies.setImageResource(moviesItem.getImageMovie());
+        GlideApp.with(holder.itemView)
+                .load(moviesItem.getImageMovie())
+                .into(holder.mImageMovies);
         holder.mTvTitle.setText(moviesItem.getmTitle());
         holder.mTvDate.setText(moviesItem.getmDate());
         holder.mRatingBar.setRating(Float.parseFloat(moviesItem.getmRating()) / 2);
@@ -46,13 +46,23 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         return moviesList.size();
     }
 
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
     class MoviesViewHolder extends RecyclerView.ViewHolder {
 
         ImageView mImageMovies;
         TextView mTvTitle, mTvDate, mTvRating, mTvDescription;
         RatingBar mRatingBar;
 
-        public MoviesViewHolder(@NonNull View itemView) {
+        MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
 
             mImageMovies = itemView.findViewById(R.id.img_movie);

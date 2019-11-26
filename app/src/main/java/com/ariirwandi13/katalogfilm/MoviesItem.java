@@ -1,14 +1,14 @@
 package com.ariirwandi13.katalogfilm;
 
-public class MoviesItem {
+class MoviesItem {
 
-    int imageMovie;
-    String mTitle;
-    String mDate;
-    String mRating;
-    String mDescription;
+    private int imageMovie;
+    private String mTitle;
+    private String mDate;
+    private String mRating;
+    private String mDescription;
 
-    public MoviesItem(int imageMovie, String mTitle, String mDate, String mRating, String mDescription) {
+    MoviesItem(int imageMovie, String mTitle, String mDate, String mRating, String mDescription) {
         this.imageMovie = imageMovie;
         this.mTitle = mTitle;
         this.mDate = mDate;
@@ -16,43 +16,24 @@ public class MoviesItem {
         this.mDescription = mDescription;
     }
 
-    public int getImageMovie() {
+    int getImageMovie() {
         return imageMovie;
     }
 
-    public void setImageMovie(int imageMovie) {
-        this.imageMovie = imageMovie;
-    }
-
-    public String getmTitle() {
+    String getmTitle() {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
-    }
-
-    public String getmDate() {
+    String getmDate() {
         return mDate;
     }
 
-    public void setmDate(String mDate) {
-        this.mDate = mDate;
-    }
-
-    public String getmRating() {
+    String getmRating() {
         return mRating;
     }
 
-    public void setmRating(String mRating) {
-        this.mRating = mRating;
-    }
-
-    public String getmDescription() {
+    String getmDescription() {
         return mDescription;
     }
 
-    public void setmDescription(String mDescription) {
-        this.mDescription = mDescription;
-    }
 }

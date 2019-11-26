@@ -21,15 +21,13 @@ import java.util.ArrayList;
  */
 public class MoviesFragment extends Fragment {
 
-    int dummyColor;
-    MoviesAdapter moviesAdapter;
-    ArrayList<MoviesItem> mMoviesList;
+    private int dummyColor;
 
     public MoviesFragment() {
     }
 
     @SuppressLint("ValidFragment")
-    public MoviesFragment(int color) {
+    MoviesFragment(int color) {
         this.dummyColor = color;
     }
 
@@ -49,7 +47,7 @@ public class MoviesFragment extends Fragment {
         recyclerView.setDrawingCacheEnabled(true);
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
 
-        mMoviesList = new ArrayList<>();
+        ArrayList<MoviesItem> mMoviesList = new ArrayList<>();
         mMoviesList.add(new MoviesItem(R.drawable.poster_joker, "Joker", "October 4, 2019", "8.6",
                 "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."));
         mMoviesList.add(new MoviesItem(R.drawable.poster_maleficent, "Maleficent: Mistress of Evil", "October 18, 2019", "7.3",
@@ -75,7 +73,7 @@ public class MoviesFragment extends Fragment {
         mMoviesList.add(new MoviesItem(R.drawable.poster_aladdin, "Aladdin", "May 24, 2019", "7.1",
                 "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true."));
 
-        moviesAdapter = new MoviesAdapter(mMoviesList, getContext());
+        MoviesAdapter moviesAdapter = new MoviesAdapter(mMoviesList, getContext());
         moviesAdapter.setHasStableIds(true);
         recyclerView.setAdapter(moviesAdapter);
 
