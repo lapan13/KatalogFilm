@@ -1,90 +1,59 @@
 package com.ariirwandi13.katalogfilm;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder> {
+public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.DummyViewHolder> {
+    ArrayList<MoviesItem> dummyList;
+    Context dummyContext;
 
-    private ArrayList<MoviesItem> mMoviesList;
-    private OnItemClickListener mListener;
-
-    public MoviesAdapter(ArrayList<MoviesItem> moviesList) {
-        mMoviesList = moviesList;
+    public MoviesAdapter(ArrayList<MoviesItem> dummyList, Context dummyContext) {
+        this.dummyList = dummyList;
+        this.dummyContext = dummyContext;
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = listener;
+    @NonNull
+    @Override
+    public DummyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movies, parent, false);
+        return new DummyViewHolder(v);
     }
 
     @Override
-    public MoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.movies_item, parent, false);
-        MoviesViewHolder evh = new MoviesViewHolder(v, mListener);
-        return evh;
-    }
+    public void onBindViewHolder(@NonNull DummyViewHolder holder, int position) {
+        MoviesItem moviesItem = dummyList.get(position);
 
-    @Override
-    public void onBindViewHolder(MoviesViewHolder holder, int position) {
-        MoviesItem currentItem = mMoviesList.get(position);
-
-        GlideApp.with(holder.itemView)
-                .load(currentItem.getImageResource())
-                .into(holder.mImageMovies);
-        holder.mTvTitle.setText(currentItem.getTitle());
-        holder.mTvDate.setText(currentItem.getDate());
-        holder.mTvRating.setText(currentItem.getRating());
-        holder.mTvRatingBar.setRating(Float.parseFloat(currentItem.getRating())/2);
-        holder.mTvDescription.setText(currentItem.getDescription());
+        holder.imgDummyHeader.setImageResource(moviesItem.getIntDummyImage());
+        holder.tvDummyTitle.setText(moviesItem.getStrDummyTitle());
+        holder.tvDummySubtitle.setText(moviesItem.getStrDummySubtitle());
     }
 
     @Override
     public int getItemCount() {
-        return mMoviesList.size();
+        return dummyList.size();
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
+    class DummyViewHolder extends RecyclerView.ViewHolder {
 
-    public static class MoviesViewHolder extends RecyclerView.ViewHolder {
-        public ImageView mImageMovies;
-        public TextView mTvTitle;
-        public TextView mTvDate;
-        public TextView mTvRating;
-        public TextView mTvDescription;
-        public RatingBar mTvRatingBar;
+        ImageView imgDummyHeader;
+        TextView tvDummyTitle, tvDummySubtitle;
 
-        public MoviesViewHolder(View itemView, final OnItemClickListener listener) {
+        public DummyViewHolder(@NonNull View itemView) {
             super(itemView);
-            mImageMovies = itemView.findViewById(R.id.img_movie);
-            mTvTitle = itemView.findViewById(R.id.tv_title);
-            mTvDate = itemView.findViewById(R.id.tv_release_date);
-            mTvRating = itemView.findViewById(R.id.tv_rating);
-            mTvRatingBar = itemView.findViewById(R.id.rtb_movies);
-            mTvDescription = itemView.findViewById(R.id.tv_description);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });
+            imgDummyHeader = itemView.findViewById(R.id.img_dummy);
+            tvDummyTitle = itemView.findViewById(R.id.tv_dummy_title);
+            tvDummySubtitle = itemView.findViewById(R.id.tv_dummy_subtitle);
+
         }
     }
 }
-
-
-

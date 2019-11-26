@@ -1,74 +1,38 @@
 package com.ariirwandi13.katalogfilm;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+public class MoviesItem {
 
-public class MoviesItem implements Parcelable {
+    int intDummyImage;
+    String strDummyTitle;
+    String strDummySubtitle;
 
-    public static final Creator<MoviesItem> CREATOR = new Creator<MoviesItem>() {
-
-        @Override
-        public MoviesItem createFromParcel(Parcel in) {
-            return new MoviesItem(in);
-        }
-
-        @Override
-        public MoviesItem[] newArray(int size) {
-            return new MoviesItem[size];
-        }
-    };
-
-    private int mImageResource;
-    private String mTitle;
-    private String mDate;
-    private String mRating;
-    private String mDescription;
-
-    public MoviesItem(int imageResource, String title, String date, String rating, String description) {
-        mImageResource = imageResource;
-        mTitle = title;
-        mDate = date;
-        mRating = rating;
-        mDescription= description;
+    public MoviesItem(int intDummyImage, String strDummyTitle, String strDummySubtitle) {
+        this.intDummyImage = intDummyImage;
+        this.strDummyTitle = strDummyTitle;
+        this.strDummySubtitle = strDummySubtitle;
     }
 
-    protected MoviesItem(Parcel in) {
-        mImageResource = in.readInt();
-        mTitle= in.readString();
-        mDate= in.readString();
-        mRating= in.readString();
-        mDescription= in.readString();
+    public int getIntDummyImage() {
+        return intDummyImage;
     }
 
-    public int getImageResource() {
-        return mImageResource;
+    public void setIntDummyImage(int intDummyImage) {
+        this.intDummyImage = intDummyImage;
     }
 
-    public String getTitle() {
-        return mTitle;
+    public String getStrDummyTitle() {
+        return strDummyTitle;
     }
 
-    public String getDate() { return mDate; }
-
-    public String getRating() {
-        return mRating;
+    public void setStrDummyTitle(String strDummyTitle) {
+        this.strDummyTitle = strDummyTitle;
     }
 
-    public String getDescription() {
-        return mDescription;
+    public String getStrDummySubtitle() {
+        return strDummySubtitle;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mImageResource);
-        dest.writeString(mTitle);
-        dest.writeString(mDate);
-        dest.writeString(mRating);
-        dest.writeString(mDescription);
+    public void setStrDummySubtitle(String strDummySubtitle) {
+        this.strDummySubtitle = strDummySubtitle;
     }
 }
