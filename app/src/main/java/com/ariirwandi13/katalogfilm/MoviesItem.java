@@ -2,37 +2,57 @@ package com.ariirwandi13.katalogfilm;
 
 public class MoviesItem {
 
-    int intDummyImage;
-    String strDummyTitle;
-    String strDummySubtitle;
+    int imageMovie;
+    String mTitle;
+    String mDate;
+    String mRating;
+    String mDescription;
 
-    public MoviesItem(int intDummyImage, String strDummyTitle, String strDummySubtitle) {
-        this.intDummyImage = intDummyImage;
-        this.strDummyTitle = strDummyTitle;
-        this.strDummySubtitle = strDummySubtitle;
+    public MoviesItem(int imageMovie, String mTitle, String mDate, String mRating, String mDescription) {
+        this.imageMovie = imageMovie;
+        this.mTitle = mTitle;
+        this.mDate = mDate;
+        this.mRating = mRating;
+        this.mDescription = mDescription;
     }
 
-    public int getIntDummyImage() {
-        return intDummyImage;
+    public int getImageMovie() {
+        return imageMovie;
     }
 
-    public void setIntDummyImage(int intDummyImage) {
-        this.intDummyImage = intDummyImage;
+    public void setImageMovie(int imageMovie) {
+        this.imageMovie = imageMovie;
     }
 
-    public String getStrDummyTitle() {
-        return strDummyTitle;
+    public String getmTitle() {
+        return mTitle;
     }
 
-    public void setStrDummyTitle(String strDummyTitle) {
-        this.strDummyTitle = strDummyTitle;
+    public void setmTitle(String mTitle) {
+        this.mTitle = mTitle;
     }
 
-    public String getStrDummySubtitle() {
-        return strDummySubtitle;
+    public String getmDate() {
+        return mDate;
     }
 
-    public void setStrDummySubtitle(String strDummySubtitle) {
-        this.strDummySubtitle = strDummySubtitle;
+    public void setmDate(String mDate) {
+        this.mDate = mDate;
+    }
+
+    public String getmRating() {
+        return mRating;
+    }
+
+    public void setmRating(String mRating) {
+        this.mRating = mRating;
+    }
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
     }
 }

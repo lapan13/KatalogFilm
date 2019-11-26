@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private void initToolBar() {
         toolbar = findViewById(R.id.toolbar_home);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) getSupportActionBar().setTitle("Tab Layout");
+        if (getSupportActionBar() != null) getSupportActionBar().setTitle("HOT MOVIES");
         // For back navigation button use this
         // if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -43,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private void initViewPager() {
         viewPager = findViewById(R.id.viewpager_home);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "HI");
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "HEY");
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "HELLO");
+        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "MOVIES");
+        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "TV SHOWS");
         viewPager.setAdapter(adapter);
     }
 
@@ -58,13 +57,10 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
                 switch (tab.getPosition()) {
                     case 0:
-                        toast("1");
+                        toast("MOVIES");
                         break;
                     case 1:
-                        toast("2");
-                        break;
-                    case 2:
-                        toast("3");
+                        toast("TV SHOWS");
                         break;
                 }
             }

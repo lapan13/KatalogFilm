@@ -1,103 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="300dp"
+    android:layout_margin="1dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/img_movie"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:src="@color/colorPrimary" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                tools:ignore="contentDescription"
-                tools:src="@color/colorPrimary" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape" />
 
-            <RelativeLayout
-                android:id="@+id/layer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:drawable/screen_background_dark_transparent" />
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            android:background="@drawable/circle"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/rating"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_8"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_nama"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:text="@string/title"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="@string/release_date"
+                android:textColor="@android:color/white" />
+
+            <RatingBar
+                android:id="@+id/rtb_movies"
+                style="?attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/tv_alamat"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                tools:text="nama wisata" />
+                android:layout_marginBottom="@dimen/margin_8"
+                android:numStars="5" />
 
             <TextView
-                android:id="@+id/tv_alamat"
+                android:id="@+id/tv_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                android:drawablePadding="4dp"
                 android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/white"
-                tools:text="alamat" />
-
-            <TextView
-                android:id="@+id/htm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:textAlignment="textEnd"
-                android:textColor="@color/white"
-                android:visibility="gone"
-                tools:text="htm :" />
-
-            <TextView
-                android:id="@+id/tv_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/tv_alamat"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/shape"
+                android:maxLines="5"
                 android:paddingStart="4dp"
-                android:paddingTop="2dp"
                 android:paddingEnd="4dp"
-                android:paddingBottom="2dp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                tools:text="harga" />
+                android:text="@string/synopsis"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_deskripsi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textColor="@color/white"
-                android:visibility="gone"
-                tools:text="deskripsi" />
-
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_8"
+            android:background="@drawable/shape"
+            android:text="@string/more_info"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
