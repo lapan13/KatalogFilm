@@ -37,15 +37,13 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar_home);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) getSupportActionBar().setTitle("HOT MOVIES");
-        // For back navigation button use this
-        // if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void initViewPager() {
         viewPager = findViewById(R.id.viewpager_home);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "MOVIES");
-        adapter.addFrag(new TvShowFragment(ContextCompat.getColor(this, R.color.bg)), "TV SHOWS");
+        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.white)), "MOVIES");
+        adapter.addFrag(new TvShowFragment(ContextCompat.getColor(this, R.color.white)), "TV SHOWS");
         viewPager.setAdapter(adapter);
     }
 
