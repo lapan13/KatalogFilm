@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewpager_home);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "MOVIES");
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.bg)), "TV SHOWS");
+        adapter.addFrag(new TvShowFragment(ContextCompat.getColor(this, R.color.bg)), "TV SHOWS");
         viewPager.setAdapter(adapter);
     }
 
