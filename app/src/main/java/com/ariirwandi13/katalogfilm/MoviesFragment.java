@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,7 +35,12 @@ public class MoviesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movies, container, false);
+        return inflater.inflate(R.layout.fragment_movies, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         final FrameLayout frameLayout = view.findViewById(R.id.frame_layout_dummy);
         frameLayout.setBackgroundColor(dummyColor);
@@ -76,8 +83,5 @@ public class MoviesFragment extends Fragment {
         MoviesAdapter moviesAdapter = new MoviesAdapter(mMoviesList, getContext());
         moviesAdapter.setHasStableIds(true);
         recyclerView.setAdapter(moviesAdapter);
-
-        return view;
     }
-
 }
