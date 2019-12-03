@@ -33,9 +33,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         moviesViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(parent.getContext(), String.valueOf(moviesList.get(viewType).getmTitle()), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(parent.getContext(), DetailActivity.class);
-                parent.getContext().startActivity(intent);
+                Toast.makeText(v.getContext(), String.valueOf(moviesList.get(viewType).getmTitle()), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), DetailActivity.class);
+
+                v.getContext().startActivity(intent);
             }
         });
 

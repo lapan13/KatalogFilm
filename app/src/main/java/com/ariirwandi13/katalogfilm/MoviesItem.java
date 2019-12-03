@@ -1,6 +1,9 @@
 package com.ariirwandi13.katalogfilm;
 
-class MoviesItem {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+class MoviesItem implements Parcelable {
 
     private int imageMovie;
     private String mTitle;
@@ -14,6 +17,26 @@ class MoviesItem {
         this.mDate = mDate;
         this.mRating = mRating;
         this.mDescription = mDescription;
+    }
+
+    public static final Creator<MoviesItem> CREATOR = new Creator<MoviesItem>() {
+        @Override
+        public MoviesItem createFromParcel(Parcel in) {
+            return new MoviesItem(in);
+        }
+
+        @Override
+        public MoviesItem[] newArray(int size) {
+            return new MoviesItem[size];
+        }
+    };
+
+    private MoviesItem(Parcel in) {
+        imageMovie = in.readInt();
+        mTitle = in.readString();
+        mDate = in.readString();
+        mRating = in.readString();
+        mDescription = in.readString();
     }
 
     int getImageMovie() {
@@ -36,4 +59,17 @@ class MoviesItem {
         return mDescription;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(imageMovie);
+        dest.writeString(mTitle);
+        dest.writeString(mDate);
+        dest.writeString(mRating);
+        dest.writeString(mDescription);
+    }
 }
