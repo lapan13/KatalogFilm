@@ -6,5 +6,6 @@
 
     <color name="white">#FFFFFF</color>
     <color name="colorTab">#3D081E</color>
+    <color name="color_clicked">#FFFFFF</color>
 
 </resources>
