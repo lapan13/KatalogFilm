@@ -27,25 +27,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     @Override
     public MoviesViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movies, parent, false);
-
-        final MoviesViewHolder moviesViewHolder = new MoviesViewHolder(v);
-
-        moviesViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), String.valueOf(moviesList.get(viewType).getmTitle()), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(v.getContext(), DetailActivity.class);
-
-                v.getContext().startActivity(intent);
-            }
-        });
-
         return new MoviesViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MoviesViewHolder holder, int position) {
-        MoviesItem moviesItem = moviesList.get(position);
+    public void onBindViewHolder(@NonNull MoviesViewHolder holder, final int position) {
+        final MoviesItem moviesItem = moviesList.get(position);
 
         GlideApp.with(holder.itemView)
                 .load(moviesItem.getImageMovie())
@@ -55,6 +42,18 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         holder.mRatingBar.setRating(Float.parseFloat(moviesItem.getmRating()) / 2);
         holder.mTvRating.setText(moviesItem.getmRating());
         holder.mTvDescription.setText(moviesItem.getmDescription());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), moviesItem.getmTitle(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                intent.putExtra("Example Item", moviesList.get(position));
+
+                v.getContext().startActivity(intent);
+
+            }
+        });
     }
 
     @Override

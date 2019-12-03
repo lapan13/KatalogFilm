@@ -5,6 +5,18 @@ import android.os.Parcelable;
 
 class MoviesItem implements Parcelable {
 
+    public static final Creator<MoviesItem> CREATOR = new Creator<MoviesItem>() {
+        @Override
+        public MoviesItem createFromParcel(Parcel in) {
+            return new MoviesItem(in);
+        }
+
+        @Override
+        public MoviesItem[] newArray(int size) {
+            return new MoviesItem[size];
+        }
+    };
+
     private int imageMovie;
     private String mTitle;
     private String mDate;
@@ -19,17 +31,7 @@ class MoviesItem implements Parcelable {
         this.mDescription = mDescription;
     }
 
-    public static final Creator<MoviesItem> CREATOR = new Creator<MoviesItem>() {
-        @Override
-        public MoviesItem createFromParcel(Parcel in) {
-            return new MoviesItem(in);
-        }
 
-        @Override
-        public MoviesItem[] newArray(int size) {
-            return new MoviesItem[size];
-        }
-    };
 
     private MoviesItem(Parcel in) {
         imageMovie = in.readInt();

@@ -1,8 +1,12 @@
 package com.ariirwandi13.katalogfilm;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,7 +34,34 @@ public class DetailActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
+        Intent intent = getIntent();
+        MoviesItem moviesItem = intent.getParcelableExtra("Example Item");
 
+        int imageRes = moviesItem.getImageMovie();
+        String title = moviesItem.getmTitle();
+        String date = moviesItem.getmDate();
+        String rating = moviesItem.getmRating();
+        String description = moviesItem.getmDescription();
+
+        ImageView imageMovie = findViewById(R.id.image_detail_movie);
+        GlideApp.with(this)
+                .load(imageRes)
+                .into(imageMovie);
+
+        TextView tvTitle = findViewById(R.id.tv_detail_title);
+        tvTitle.setText(title);
+
+        TextView tvDate = findViewById(R.id.tv_deatil_date);
+        tvDate.setText(date);
+
+        TextView tvRate = findViewById(R.id.tv_detail_rating);
+        tvRate.setText(rating);
+
+        RatingBar rtBar = findViewById(R.id.rtb_detail_movies);
+        rtBar.setRating(Float.parseFloat(rating) / 2);
+
+        TextView tvDesc = findViewById(R.id.tv_synopsis);
+        tvDesc.setText(description);
     }
 
     @Override

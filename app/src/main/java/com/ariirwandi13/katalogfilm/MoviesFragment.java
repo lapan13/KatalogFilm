@@ -84,4 +84,6 @@ public class MoviesFragment extends Fragment {
         moviesAdapter.setHasStableIds(true);
         recyclerView.setAdapter(moviesAdapter);
     }
+
+
 }
