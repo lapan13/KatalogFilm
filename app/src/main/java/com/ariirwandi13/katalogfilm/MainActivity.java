@@ -1,7 +1,11 @@
 package com.ariirwandi13.katalogfilm;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private void initToolBar() {
         toolbar = findViewById(R.id.toolbar_home);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) getSupportActionBar().setTitle("HOT MOVIES");
+        if (getSupportActionBar() != null) getSupportActionBar().setTitle(R.string.app_name);
     }
 
     private void initViewPager() {
@@ -58,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
                 switch (tab.getPosition()) {
                     case 0:
-                        toast("MOVIES");
+                        toast(R.string.tab_movies);
                         break;
                     case 1:
-                        toast("TV SHOWS");
+                        toast(R.string.tab_tvshow);
                         break;
                 }
             }
@@ -76,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    void toast(String msg) {
+    void toast(int msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
@@ -113,15 +117,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setMessage("Are you sure want to Exit ?")
+                .setMessage(R.string.sure)
                 .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(R.string.no, null)
                 .show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.settings, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_change_settings) {
+            Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+            startActivity(mIntent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
