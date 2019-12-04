@@ -11,10 +11,8 @@
     <string name="sure">Are you sure want to Exit \?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-
     <string name="english">English</string>
     <string name="bahasa">Bahasa</string>
-
 
     <string-array name="titles_array">
         <item>Joker</item>

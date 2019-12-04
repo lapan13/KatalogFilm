@@ -42,16 +42,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
         holder.mRatingBar.setRating(Float.parseFloat(moviesItem.getmRating()) / 2);
         holder.mTvRating.setText(moviesItem.getmRating());
         holder.mTvDescription.setText(moviesItem.getmDescription());
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), moviesItem.getmTitle(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), DetailActivity.class);
                 intent.putExtra("Example Item", moviesList.get(position));
-
                 v.getContext().startActivity(intent);
-
             }
         });
     }
@@ -80,7 +77,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
 
         MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
-
             item_movies = itemView.findViewById(R.id.cardview);
             mImageMovies = itemView.findViewById(R.id.img_movie);
             mTvTitle = itemView.findViewById(R.id.tv_title);
@@ -88,7 +84,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
             mRatingBar = itemView.findViewById(R.id.rtb_movies);
             mTvRating = itemView.findViewById(R.id.tv_rating);
             mTvDescription = itemView.findViewById(R.id.tv_description);
-
         }
     }
 }

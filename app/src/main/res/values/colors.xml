@@ -7,5 +7,5 @@
     <color name="white">#FFFFFF</color>
     <color name="colorTab">#3D081E</color>
     <color name="color_clicked">#FFFFFF</color>
-
+    <color name="ripple_color">#FFFFFF</color>
 </resources>

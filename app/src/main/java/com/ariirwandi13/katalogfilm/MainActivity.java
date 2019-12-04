@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     ViewPager viewPager;
     TabLayout tabLayout;
+    Locale myLocale;
+    Configuration conf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -166,14 +168,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
+        myLocale = new Locale(lang);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
+        conf = res.getConfiguration();
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
         Intent refresh = new Intent(this, MainActivity.class);
         finish();
         startActivity(refresh);
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration conf) {
+        super.onConfigurationChanged(conf);
+        conf.setLocale(myLocale);
     }
 }

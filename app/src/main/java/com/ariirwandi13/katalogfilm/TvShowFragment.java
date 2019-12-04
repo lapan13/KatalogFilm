@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,13 +36,17 @@ public class TvShowFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tv_show, container, false);
+        return inflater.inflate(R.layout.fragment_tv_show, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         final FrameLayout frameLayout = view.findViewById(R.id.frame_layout_dummy);
         frameLayout.setBackgroundColor(dummyColor);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_dummy);
-
         LinearLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setHasFixedSize(true);
@@ -69,8 +75,5 @@ public class TvShowFragment extends Fragment {
         MoviesAdapter moviesAdapter = new MoviesAdapter(mTvShowList, getContext());
         moviesAdapter.setHasStableIds(true);
         recyclerView.setAdapter(moviesAdapter);
-
-        return view;
     }
-
 }

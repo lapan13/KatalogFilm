@@ -31,8 +31,6 @@ class MoviesItem implements Parcelable {
         this.mDescription = mDescription;
     }
 
-
-
     private MoviesItem(Parcel in) {
         imageMovie = in.readInt();
         mTitle = in.readString();

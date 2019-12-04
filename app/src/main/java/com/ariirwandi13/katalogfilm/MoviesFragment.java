@@ -47,7 +47,6 @@ public class MoviesFragment extends Fragment {
         frameLayout.setBackgroundColor(dummyColor);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_dummy);
-
         LinearLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setHasFixedSize(true);
@@ -77,6 +76,4 @@ public class MoviesFragment extends Fragment {
         moviesAdapter.setHasStableIds(true);
         recyclerView.setAdapter(moviesAdapter);
     }
-
-
 }

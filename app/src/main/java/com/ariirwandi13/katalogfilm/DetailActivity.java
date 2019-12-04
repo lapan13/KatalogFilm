@@ -28,7 +28,6 @@ public class DetailActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar_detail);
         setSupportActionBar(toolbar);
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -36,7 +35,6 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         MoviesItem moviesItem = intent.getParcelableExtra("Example Item");
-
         int imageRes = moviesItem.getImageMovie();
         String title = moviesItem.getmTitle();
         String date = moviesItem.getmDate();
