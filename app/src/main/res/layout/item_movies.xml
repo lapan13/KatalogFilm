@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="300dp"
     android:id="@+id/cardview"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/margin_4"
-    android:foreground="@drawable/selectable_item_background"
-    app:cardCornerRadius="16dp">
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/colorPrimary"
+    app:strokeWidth="@dimen/margin_2">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -98,4 +99,4 @@
             android:textColor="@color/colorAccent"
             android:visibility="gone" />
     </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

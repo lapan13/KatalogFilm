@@ -2,8 +2,10 @@ package com.ariirwandi13.katalogfilm;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,14 +45,15 @@ public class MainActivity extends AppCompatActivity {
     private void initToolBar() {
         toolbar = findViewById(R.id.toolbar_home);
         setSupportActionBar(toolbar);
+        toolbar.setOverflowIcon(ContextCompat.getDrawable(this, R.drawable.ic_settings));
         if (getSupportActionBar() != null) getSupportActionBar().setTitle(R.string.app_name);
     }
 
     private void initViewPager() {
         viewPager = findViewById(R.id.viewpager_home);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.white)), "MOVIES");
-        adapter.addFrag(new TvShowFragment(ContextCompat.getColor(this, R.color.white)), "TV SHOWS");
+        adapter.addFrag(new MoviesFragment(ContextCompat.getColor(this, R.color.white)), getResources().getString(R.string.tab_movies));
+        adapter.addFrag(new TvShowFragment(ContextCompat.getColor(this, R.color.white)), getResources().getString(R.string.tab_tvshow));
         viewPager.setAdapter(adapter);
     }
 
@@ -137,10 +141,39 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_change_settings) {
-            Intent mIntent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
-            startActivity(mIntent);
+        switch (item.getItemId()) {
+            case R.id.en:
+                Locale locale = new Locale("en");
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                Toast.makeText(this, "English is Chosen!", Toast.LENGTH_LONG).show();
+                setLocale("en");
+                break;
+
+            case R.id.in:
+                Locale locale2 = new Locale("in");
+                Locale.setDefault(locale2);
+                Configuration config2 = new Configuration();
+                config2.locale = locale2;
+                getBaseContext().getResources().updateConfiguration(config2, getBaseContext().getResources().getDisplayMetrics());
+                Toast.makeText(this, "Bahasa Indonesia dipilih!", Toast.LENGTH_LONG).show();
+                setLocale("in");
+                break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(refresh);
     }
 }

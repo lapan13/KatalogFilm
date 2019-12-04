@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Hot Movies</string>
+    <string name="app_name">HOT MOVIES</string>
     <string name="tab_movies">FILM</string>
     <string name="tab_tvshow">ACARA TV</string>
     <string name="title">Judul</string>
@@ -13,7 +13,8 @@
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
 
-    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="english">English</string>
+    <string name="bahasa">Bahasa</string>
 
     <string-array name="titles_array">
         <item>Joker</item>
@@ -43,56 +44,56 @@
     </string-array>
 
     <string-array name="dates_array">
-        <item>October 4, 2019</item>
-        <item>October 18, 2019</item>
-        <item>November 1, 2019</item>
-        <item>December 20, 2019</item>
-        <item>August 2, 2019</item>
-        <item>July 2, 2019</item>
-        <item>July 19, 2019</item>
-        <item>October 11, 2019</item>
-        <item>August 14, 2019</item>
-        <item>October 18, 2019</item>
-        <item>June 21, 2019</item>
-        <item>May 24, 2019</item>
-        <item>November 12, 2019</item>
-        <item>November 3, 2019</item>
-        <item>November 1, 2019</item>
-        <item>October 6, 2019</item>
-        <item>August 29, 2019</item>
-        <item>February 15, 2019</item>
-        <item>November 21, 2019</item>
-        <item>October 20, 2019</item>
-        <item>October 11, 2019</item>
-        <item>July 25, 2019</item>
-        <item>November 15, 2019</item>
-        <item>October 27, 2019</item>
+        <item>4 Oktober 2019</item>
+        <item>18 Oktober 2019</item>
+        <item>1 November 2019</item>
+        <item>20 Desember 2019</item>
+        <item>2 Agustus 2019</item>
+        <item>2 Juli 2019</item>
+        <item>19 Juli 2019</item>
+        <item>11 Oktober 2019</item>
+        <item>14 Agustus 2019</item>
+        <item>18 Oktober 2019</item>
+        <item>21 Juni 2019</item>
+        <item>24 Mei 2019</item>
+        <item>12 November 2019</item>
+        <item>3 November 2019</item>
+        <item>1 November 2019</item>
+        <item>6 Oktober 2019</item>
+        <item>29 Agustus 2019</item>
+        <item>15 Februari 2019</item>
+        <item>21 November 2019</item>
+        <item>20 Oktober 2019</item>
+        <item>11 Oktober 2019</item>
+        <item>25 Juli 2019</item>
+        <item>15 November 2019</item>
+        <item>27 Oktober 2019</item>
     </string-array>
 
     <string-array name="synopsis_array">
-        <item>During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.</item>
-        <item>Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play.</item>
-        <item>More than two decades have passed since Sarah Connor prevented Judgment Day, changed the future, and re-wrote the fate of the human race. Dani Ramos is living a simple life in Mexico City with her brother and father when a highly advanced and deadly new Terminator – a Rev-9 – travels back through time to hunt and kill her. Dani\'s survival depends on her joining forces with two warriors, Grace, an enhanced super-soldier from the future, and a battle-hardened Sarah Connor. As the Rev-9 ruthlessly destroys everything and everyone in its path on the hunt for Dani, the three are led to a T-800 from Sarah\’s past that may be their last best hope.</item>
-        <item>Ip Man 4 is an upcoming Hong Kong biographical martial arts film directed by Wilson Yip and produced by Raymond Wong. It is the fourth in the Ip Man film series based on the life of the Wing Chun grandmaster of the same name and features Donnie Yen reprising the role. The film began production in April 2018 and ended in July the same year.</item>
-        <item>Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have swapped smacks and bad words. But when cyber-genetically enhanced anarchist Brixton\'s ruthless actions threaten the future of humanity, both join forces to defeat him. (A spin-off of \"The Fate of the Furious\”, focusing on Johnson\'s Luke Hobbs and Statham\'s Deckard Shaw.)</item>
-        <item>Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.</item>
-        <item>Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub\'s arrival. Scar, Mufasa\'s brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba\'s exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.</item>
-        <item>In the wake of his dramatic escape from captivity, Jesse Pinkman must come to terms with his past in order to forge some kind of future.</item>
-        <item>Red, Chuck, Bomb and the rest of their feathered friends are surprised when a green pig suggests that they put aside their differences and unite to fight a common threat. Aggressive birds from an island covered in ice are planning to use an elaborate weapon to destroy the fowl and swine.</item>
-        <item>The group will face a new zombie threat as a new breed of zombie has developed. This new super-zombie type is faster, bigger, and stronger than the previous strain of zombies and harder to kill. These super-zombies have started grouping up into a horde going from city to city leaving a path of destruction behind them.</item>
-        <item>Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that\'s Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy.</item>
-        <item>A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.</item>
-        <item>Set after the fall of the Empire and before the emergence of the First Order, we follow the travails of a lone gunfighter in the outer reaches of the galaxy far from the authority of the New Republic.</item>
-        <item>Lyra is an orphan who lives in a parallel universe in which science, theology and magic are entwined. Lyra\'s search for a kidnapped friend uncovers a sinister plot involving stolen children, and turns into a quest to understand a mysterious phenomenon called Dust. She is later joined on her journey by Will, a boy who possesses a knife that can cut windows between worlds. As Lyra learns the truth about her parents and her prophesied destiny, the two young people are caught up in a war against celestial powers that ranges across many worlds.</item>
-        <item>A virus has decimated humankind. Those who survived emerged blind. Centuries later when twins are born with the mythic ability to see, their father must protect his tribe against a threatened queen.</item>
-        <item>Kate Kane, armed with a passion for social justice and a flair for speaking her mind, soars onto the streets of Gotham as Batwoman, an out lesbian and highly trained street fighter primed to snuff out the failing city\'s criminal resurgence. But don\'t call her a hero yet. In a city desperate for a savior, Kate must overcome her own demons before embracing the call to be Gotham\'s symbol of hope.</item>
-        <item>In a mystical and dark city filled with humans, fairies and other creatures, a police detective investigates a series of gruesome murders leveled against the fairy population. During his investigation, the detective becomes the prime suspect and must find the real killer to clear his name.</item>
-        <item>The Doom Patrol\’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.</item>
-        <item>Sofiane, Victor and Luisa, three seemingly incompatible teenagers find themselves bound together by a supernatural force.</item>
-        <item>Set in an alternate history where \“superheroes\” are treated as outlaws, \“Watchmen\” embraces the nostalgia of the original groundbreaking graphic novel while attempting to break new ground of its own.</item>
-        <item>Shinjuku ward east side. The center of the street with most chaos, There\'s a Kabukicho with full of neon lights. When the light is stronger, the shadow is deeper. The story begins when certain bizarre murder happens one night! Suspense? Or Comedy? Drama that cannot identify begins!</item>
-        <item>A group of vigilantes known informally as \“The Boys\” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.</item>
-        <item>After being dumped by her longtime boyfriend, a young woman must deal with her own imagination in order to literally and metaphorically re-enter the world of women, and rekindle the female friendships she left behind.</item>
-        <item>A dual coming-of-age comedy exploring the impact of internet porn and social media, Mrs. Fletcher follows empty nest divorcée Eve Fletcher — as she reinvents her life to find the happiness and sexual fulfillment that\’s eluded her, and her college freshman son Brendan.</item>
+        <item>Selama 1980-an, seorang pelawak berdiri gagal didorong gila dan beralih ke kehidupan kejahatan dan kekacauan di Kota Gotham sambil menjadi tokoh kejahatan psikopat terkenal.</item>
+        <item>Maleficent dan putri baptisnya Aurora mulai mempertanyakan ikatan keluarga kompleks yang mengikat mereka saat mereka ditarik ke arah yang berbeda dengan pernikahan yang akan datang, sekutu yang tak terduga, dan pasukan baru yang gelap sedang bermain.</item>
+        <item>Lebih dari dua dekade telah berlalu sejak Sarah Connor mencegah Hari Penghakiman, mengubah masa depan, dan menulis ulang nasib umat manusia. Dani Ramos menjalani kehidupan sederhana di Mexico City bersama saudara laki-laki dan ayahnya ketika Terminator baru yang sangat maju dan mematikan - seorang Rev-9 - melakukan perjalanan kembali melalui waktu untuk berburu dan membunuhnya. Kelangsungan hidup Dani bergantung pada kekuatannya bergabung dengan dua prajurit, Grace, seorang prajurit super yang disempurnakan dari masa depan, dan seorang Sarah Connor yang berjuang keras. Saat Rev-9 tanpa ampun menghancurkan segalanya dan semua orang di jalurnya untuk berburu Dani, ketiganya mengarah ke T-800 dari masa lalu Sarah yang mungkin menjadi harapan terbaik terakhir mereka.</item>
+        <item>Ip Man 4 adalah film seni bela diri biografi Hong Kong yang akan datang yang disutradarai oleh Wilson Yip dan diproduksi oleh Raymond Wong. Ini adalah yang keempat dalam seri film Ip Man berdasarkan kehidupan grandmaster Wing Chun dengan nama yang sama dan fitur Donnie Yen mengulangi peran. Film ini mulai diproduksi pada April 2018 dan berakhir pada Juli di tahun yang sama. </item>
+        <item>Hobbs &amp; Shaw (2019) cinema film baru barat yang sangat seru Ini bercerita Luke Hobbs (Dwayne Johnson) terpaksa membentuk aliansi yang mustahil dengan Deckard Shaw (Jason Statham). Keduanya terpaksa bersatu membantu Hattie Shaw (Vanessa Kirby) untuk memburu senjata virus berbahaya dan Brixton (Idris Elba). Brixton adalah penjahat jenis baru yang berhasil mengubah dirinya menjadi manusia super. Keberadaanya menjadi ancaman bagi umat manusia.</item>
+        <item>Peter Parker dan teman-temannya melakukan perjalanan musim panas ke Eropa. Namun, mereka hampir tidak dapat beristirahat - Peter harus setuju untuk membantu Nick Fury mengungkap misteri makhluk yang menyebabkan bencana alam dan kehancuran di seluruh benua.</item>
+        <item>Simba mengidolakan ayahnya, Raja Mufasa, dan mengambil hati takdir kerajaannya sendiri. Tetapi tidak semua orang di kerajaan itu merayakan kedatangan anaknya yang baru. Scar, saudara lelaki Mufasa — dan mantan pewaris takhta — memiliki rencana sendiri. Pertempuran untuk Pride Rock dirusak dengan pengkhianatan, tragedi dan drama, yang akhirnya mengakibatkan pengasingan Simba. Dengan bantuan dari sepasang teman baru yang penasaran, Simba harus mencari cara untuk tumbuh dan mengambil kembali apa yang menjadi haknya.</item>
+        <item>Di tengah pelarian dramatisnya dari penawanan, Jesse Pinkman harus berdamai dengan masa lalunya untuk menempa semacam masa depan. </item>
+        <item>Red, Chuck, Bomb dan teman-teman berbulu mereka terkejut ketika seekor babi hijau menyarankan agar mereka mengesampingkan perbedaan mereka dan bersatu untuk melawan ancaman bersama. Burung agresif dari sebuah pulau yang tertutup es berencana menggunakan senjata yang rumit untuk menghancurkan unggas dan babi.</item>
+        <item>Grup ini akan menghadapi ancaman zombie baru karena jenis zombie baru telah berkembang. Tipe super-zombie baru ini lebih cepat, lebih besar, dan lebih kuat dari jenis zombie sebelumnya dan lebih sulit untuk dibunuh. Zombi super ini telah mulai berkelompok menjadi gerombolan yang bergerak dari kota ke kota, meninggalkan jalan kehancuran di belakang mereka.</item>
+        <item>Woody selalu yakin tentang tempatnya di dunia dan bahwa prioritasnya adalah merawat anaknya, apakah itu Andy atau Bonnie. Tetapi ketika Bonnie menambahkan mainan baru yang enggan disebut "Forky" ke kamarnya, petualangan perjalanan bersama teman-teman lama dan baru akan menunjukkan kepada Woody seberapa besar dunia untuk sebuah mainan.</item>
+        <item>Aladdin adalah penjahat jalanan baik hati. Ia akan bersaing dengan Jafar seorang penyihir jahat untuk memperebutkan lampu ajaib yang memiliki kekuatan membuat keinginan terdalam mereka menjadi kenyataan.</item>
+        <item>Ditetapkan setelah jatuhnya Kekaisaran dan sebelum munculnya Orde Pertama, kita mengikuti kerja keras seorang penembak jitu di bagian luar galaksi yang jauh dari otoritas Republik Baru. </item>
+        <item>Lyra adalah seorang yatim piatu yang hidup di alam semesta paralel di mana sains, teologi, dan sihir terjalin. Pencarian Lyra untuk seorang teman yang diculik mengungkap plot jahat yang melibatkan anak-anak yang dicuri, dan berubah menjadi pencarian untuk memahami fenomena misterius yang disebut Dust. Dia kemudian bergabung dalam perjalanannya oleh Will, seorang bocah lelaki yang memiliki pisau yang dapat memotong jendela antar dunia. Saat Lyra mengetahui kebenaran tentang orang tuanya dan takdirnya yang dinubuatkan, kedua orang muda itu terperangkap dalam perang melawan kekuatan selestial yang tersebar di banyak dunia. </item>
+        <item>Virus telah menghancurkan manusia. Mereka yang selamat ternyata buta. Berabad-abad kemudian ketika anak kembar dilahirkan dengan kemampuan mitis untuk melihat, ayah mereka harus melindungi sukunya dari ratu yang terancam. </item>
+        <item>Kate Kane, dipersenjatai dengan hasrat untuk keadilan sosial dan bakat untuk mengutarakan pikirannya, melonjak ke jalan-jalan Gotham sebagai Batwoman, seorang pejuang jalanan lesbian dan sangat terlatih prima untuk memadamkan kebangkitan kriminal kota yang gagal itu . Tapi jangan panggil dia pahlawan. Di kota yang sangat membutuhkan penyelamat, Kate harus mengatasi iblisnya sendiri sebelum menerima panggilan untuk menjadi simbol harapan Gotham.</item>
+        <item> Di kota mistis dan gelap yang dipenuhi manusia, peri, dan makhluk lain, seorang detektif polisi menyelidiki serangkaian pembunuhan mengerikan yang ditujukan pada populasi peri. Selama penyelidikan, detektif menjadi tersangka utama dan harus menemukan pembunuh yang sebenarnya untuk membersihkan namanya. </item>
+        <item>Anggota Patroli Doom masing-masing mengalami kecelakaan mengerikan yang memberi mereka kemampuan manusia super - tetapi juga membuat mereka terluka dan cacat. Trauma dan tertindas, tim menemukan tujuan melalui Ketua, yang menyatukan mereka untuk menyelidiki fenomena paling aneh yang ada - dan untuk melindungi Bumi dari apa yang mereka temukan.</item>
+        <item>Sofiane, Victor dan Luisa, tiga remaja yang tampaknya tidak cocok menemukan diri mereka terikat oleh kekuatan supranatural. </item>
+        <item>Ditetapkan dalam sejarah alternatif di mana \"pahlawan super\" diperlakukan sebagai penjahat, \"Penjaga\" merangkul nostalgia dari novel grafis terobosan asli saat mencoba untuk memecahkan landasan baru sendiri</item>
+        <item>sisi timur bangsal Shinjuku. Pusat jalan dengan sebagian besar kekacauan, Ada Kabukicho dengan lampu neon penuh. Saat cahayanya lebih kuat, bayangannya lebih dalam. Cerita dimulai ketika pembunuhan aneh terjadi pada suatu malam! Ketegangan? Atau Komedi? Drama yang tidak dapat mengidentifikasi dimulai! </item>
+        <item>Sekelompok penjaga yang dikenal secara informal sebagai \"The Boys\" berangkat untuk menjatuhkan superhero korup dengan tidak lebih dari grit kerah biru dan kemauan untuk melawan kecurangan.</item>
+        <item>Setelah dicampakkan oleh pacarnya yang sudah lama, seorang wanita muda harus berurusan dengan imajinasinya sendiri untuk secara harfiah dan metaforis memasuki kembali dunia wanita, dan menyalakan kembali persahabatan perempuan yang ditinggalkannya.</item>
+        <item>Komedi dua zaman yang mengeksplorasi dampak dari pornografi internet dan media sosial, Ny. Fletcher mengikuti perceraian sarang kosong Eve Fletcher - saat ia menemukan kembali kehidupannya untuk menemukan kebahagiaan dan kepuasan seksual yang menghindarinya, dan putranya yang baru kuliah, Brendan. </item>
     </string-array>
 </resources>

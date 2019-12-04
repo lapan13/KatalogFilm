@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hot Movies</string>
+    <string name="app_name">HOT MOVIES</string>
     <string name="tab_movies">MOVIES</string>
     <string name="tab_tvshow">TV SHOWS</string>
     <string name="title">Title</string>
@@ -12,7 +12,8 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
-    <string name="change_language_settings">Change Language Settings</string>
+    <string name="english">English</string>
+    <string name="bahasa">Bahasa</string>
 
 
     <string-array name="titles_array">
